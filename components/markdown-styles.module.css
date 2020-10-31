@@ -1,7 +1,9 @@
 .markdown {
   @apply text-lg leading-relaxed;
 }
-
+.text-justify{
+  text-align: justify;
+}
 .markdown p,
 .markdown ul,
 .markdown ol,
