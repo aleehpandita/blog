@@ -1,42 +1,58 @@
-import Container from './container'
-import cn from 'classnames'
-import { EXAMPLE_PATH } from '@/lib/constants'
+import React from 'react'
+import {
+  Container,
+  Divider,
+  Dropdown,
+  Grid,
+  Header,
+  Image,
+  List,
+  Menu,
+  Segment,
+} from 'semantic-ui-react'
 
-export default function Alert({ preview }) {
-  return (
-    <div
-      className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
-      })}
-    >
+const Alert = () => (
+  <div>
+    <Menu fixed='top' inverted>
       <Container>
-        <div className="py-2 text-center text-sm">
-          {preview ? (
-            <>
-              This is page is a preview.{' '}
-              <a
-                href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
-              >
-                Click here
-              </a>{' '}
-              to exit preview mode.
-            </>
-          ) : (
-            <>
-              This blog is made with love by Cancun Locals{' '}
-              <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-success duration-200 transition-colors"
-              >
-                available on GitHub
-              </a>
-              .
-            </>
-          )}
-        </div>
+        <Menu.Item as='a' header>
+          <Image size='mini' src='/coco.png' style={{ marginRight: '1.5em' }} />
+          Project Name
+        </Menu.Item>
+        <Menu.Item as='a'>Home</Menu.Item>
+
+        <Dropdown item simple text='Dropdown'>
+          <Dropdown.Menu>
+            <Dropdown.Item>List Item</Dropdown.Item>
+            <Dropdown.Item>List Item</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Header>Header Item</Dropdown.Header>
+            <Dropdown.Item>
+              <i className='dropdown icon' />
+              <span className='text'>Submenu</span>
+              <Dropdown.Menu>
+              <Dropdown.Item as='a'>News</Dropdown.Item>
+                <Dropdown.Item as='a'>Coronavirus</Dropdown.Item>
+                <Dropdown.Item as='a'>Entertainment</Dropdown.Item>
+                <Dropdown.Item as='a'>Life</Dropdown.Item>
+                <Dropdown.Item as='a'>Culture</Dropdown.Item>
+                <Dropdown.Item as='a'>Travel</Dropdown.Item>
+                <Dropdown.Item as='a'>Media</Dropdown.Item>
+                <Dropdown.Item as='a'>Gallery</Dropdown.Item>
+                <Dropdown.Item as='a'>Events</Dropdown.Item>
+                <Dropdown.Item as='a'>Shopping</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown.Item>
+            <Dropdown.Item>List Item</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Container>
-    </div>
-  )
-}
+    </Menu>
+
+ 
+
+  
+  </div>
+)
+
+export default Alert
