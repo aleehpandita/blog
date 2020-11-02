@@ -37,7 +37,7 @@ const Section = () => {
             </div>
   
             <div className="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
-              <div className="bg-gray-300 h-56 w-full rounded-lg shadow-md bg-cover bg-center" ></div>
+              <div className="bg-gray-300 b2 h-56 w-full rounded-lg shadow-md bg-cover bg-center" ></div>
   
               <div className=" w-70 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden p-5">
                 
@@ -57,7 +57,7 @@ const Section = () => {
             </div>
   
             <div className="p-4 md:w-1/3 md:mb-0 mb-6 flex flex-col justify-center items-center max-w-sm mx-auto">
-              <div className="bg-gray-300 h-56 w-full rounded-lg shadow-md bg-cover bg-center" ></div>
+              <div className="bg-gray-300 h-56 w-full b3 rounded-lg shadow-md bg-cover bg-center" ></div>
   
               <div className=" w-70 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden p-5">
                 
