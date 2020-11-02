@@ -10,6 +10,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  tags,
 }) {
   return (
     <div>
@@ -27,7 +28,14 @@ export default function PostPreview({
       </h3>
       <div className="text-lg mb-4">
         <Date dateString={date} />
+      
       </div>
+      Tags:
+        {tags.map((post) => (
+            <span key={post.name} className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-600 bg-teal-200 last:mr-0 mr-1">
+            {post.name} 
+          </span>      
+          ))}
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
     </div>

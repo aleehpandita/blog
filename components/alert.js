@@ -1,39 +1,71 @@
-import React from 'react'
+import React from "react";
 
-const Alert = () => (
- 
-    <div className="relative bg-black">
-    
-    <div className="max-w-7xl mx-auto px-4 sm:px-6">
+const alert = () => {
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
 
-      <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
-         <div className="lg:w-0 lg:flex-1">
-         <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-    <span class="font-semibold text-xl tracking-tight">CancunbyLocals</span>
-  </div>     
-
-            
-         </div>
+  return (
+     <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-purple-700 rounded">
+      <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+   
       
-         <nav className="hidden md:flex space-x-10">
-        
-         </nav>
-         <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900">
-            Sign in
-            </a>
-            <span className="inline-flex rounded-md shadow-sm">
-            <a href="#" className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-            Do u live in Cancun? You can Join us!
-            </a>
-            </span>
-         </div>
-      </div>
-   </div>
-    
-    </div>
-    
-  )
+      
+        <div className="w-full relative flex justify-between lg:w-auto px-4 ">
+        <img src="/coco.png" alt="..." className="h-8 sm:h-8" />
+          <a className=" text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white hover:text-pink-700"  href="#pablo">
+         Cancunbylocals
+   
+          </a>
+          <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button" onClick={() => setNavbarOpen(!navbarOpen)}>
+            <span className="block relative w-6 h-px rounded-sm bg-white"></span>
+            <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
+            <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
+          </button>
+        </div>
+        <div className={
+              "lg:flex flex-grow items-center" +
+              (navbarOpen ? " flex" : " hidden")
+            } id="example-navbar-info">
+          <ul className="flex flex-col lg:flex-row list-none ml-auto">
+          <li className="nav-item">
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white" href="#pablo">
+                CORONAVIRUS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white" href="#pablo">
+                News
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white">
+                Shopping
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white" href="#pablo">
+                Explore
+              </a>
+            </li>
+            <li className="nav-item">
+              
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white" href="#pablo">
+          
 
-export default Alert
+           Login
+              </a>
+            </li>
+            <li className="nav-item">
+            <a
+          href="#"
+          className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-pink-500 hover:bg-white mt-4 lg:mt-0">
+          If you live in Cancun, Join Us!
+        </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default alert;
