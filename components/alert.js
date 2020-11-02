@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 
 const alert = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -10,7 +11,7 @@ const alert = () => {
       
       
         <div className="w-full relative flex justify-between lg:w-auto px-4 ">
-        <img src="/coco.png" alt="..." className="h-8 sm:h-8" />
+        <Image src="/coco.png" alt="..." className="h-8 sm:h-8" />
           <a className=" text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white hover:text-pink-700"  href="/">
          Cancunbylocals
    
