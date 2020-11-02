@@ -30,10 +30,14 @@ export default function PostPreview({
         <Date dateString={date} />
       
       </div>
-      Tags:
+      
         {tags.map((post) => (
-            <span key={post.name} className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-600 bg-teal-200 last:mr-0 mr-1">
-            {post.name} 
+          
+              <span key={post.name} className={"text-xs font-semibold inline-flex py-1 px-2 uppercase  text-"+(post.color)+"-600 last:mr-0 mr-1 bg-"+(post.color)+"-200"
+              
+            }>
+             
+            # {post.name} 
           </span>      
           ))}
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>

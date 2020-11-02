@@ -11,7 +11,7 @@ const alert = () => {
       
         <div className="w-full relative flex justify-between lg:w-auto px-4 ">
         <img src="/coco.png" alt="..." className="h-8 sm:h-8" />
-          <a className=" text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white hover:text-pink-700"  href="#pablo">
+          <a className=" text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white hover:text-pink-700"  href="/">
          Cancunbylocals
    
           </a>
@@ -29,6 +29,11 @@ const alert = () => {
           <li className="nav-item">
               <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white" href="#pablo">
                 CORONAVIRUS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75 hover:text-pink-500  hover:bg-white" href="#pablo">
+                Technology
               </a>
             </li>
             <li className="nav-item">

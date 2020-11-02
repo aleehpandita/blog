@@ -2,6 +2,10 @@ module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
     extend: {
+      // Some useful comment
+    fontFamily: {
+      'MyFont': ['Satisfy', 'cursive'] // Ensure fonts with spaces have " " surrounding it.
+    },
       colors: {
         'accent-1': '#EAEAEA',
         'accent-2': '#EAEAEA',

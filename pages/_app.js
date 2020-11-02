@@ -1,5 +1,8 @@
 import '@/styles/index.css'
-import 'semantic-ui-css/semantic.min.css'
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+</style>
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
